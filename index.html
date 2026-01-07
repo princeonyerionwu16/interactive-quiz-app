@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ GAME </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="screen active" id="start-screen">
+            <h1>QUIZ TIME! </h1>
+            <P>Test your knowledge with these fun questions</P>
+
+            <input 
+  type="text" 
+  id="username" 
+  placeholder="Enter your name"
+  style="padding:10px; width:80%; margin-bottom:15px;"
+/>
+
+            <button id="start-btn">start quiz</button>
+        </div> 
+  
+        <div class="screen" id="quiz-screen">
+            <div class="quiz-hearder">
+                <h2 id="question-text">Question goes here</h2>
+                <div class="quiz-info"></div>
+                <p>
+                    Question <span id="current-question">1</span> of <span id="totalquestions">5</span>
+                </p>
+                <p>
+                    score  <span id="score">o</span>
+                </p>
+                
+                <p>
+  Time left: <span id="time">30</span>s
+</p>
+
+            </div>
+        </div>
+
+        <div id="answers-container" class="answer-container">
+            <!--answer button will be inserted later on from our js cde later n-->
+        </div>
+
+        <div class="progress-bar">
+            <div id="progress" class="progress">
+            </div>
+        </div>
+        <div id="result-screen" class="screen">
+            <h1>Quiz Results</h1>
+            <div class="result-info">
+                <p> you scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
+                <div id="result-message">good job</div>
+            </div>
+            <h3>Leaderboard</h3>
+<ul id="leaderboard"></ul>
+
+            <button id="restart-btn">restart quiz</button>
+
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
