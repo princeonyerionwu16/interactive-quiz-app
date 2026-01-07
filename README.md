@@ -2,6 +2,11 @@
 
 An interactive programming quiz web application built with **HTML, CSS, and JavaScript**.  
 The quiz displays multiple-choice programming questions, calculates scores, gives performance feedback, and randomizes questions and options on every restart.
+## Screenshots
+
+![Quiz Home](screenshots/quiz-home.png)
+![Quiz Question](screenshots/quiz-question.png)
+![Quiz Result](screenshots/quiz-result.png)
 
 ---
 
