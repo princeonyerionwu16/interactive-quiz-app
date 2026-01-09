@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ GAME </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <body>
+  <div class="container">
+
+    <!-- START SCREEN -->
+    <div class="screen active" id="start-screen">
+      <h1>QUIZ TIME!</h1>
+      <p>Test your knowledge with these fun questions</p>
+
+      <input
+        type="text"
+        id="username"
+        placeholder="Enter your name"
+      />
+
+      <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <!-- QUIZ SCREEN -->
+    <div class="screen" id="quiz-screen">
+      <div class="quiz-header">
+        <h2 id="question-text"></h2>
+
+        <p>
+          Question <span id="current-question">1</span> of
+          <span id="total-questions">15</span>
+        </p>
+
+        <p>Score: <span id="score">0</span></p>
+
+        <p>⏱️ Time left: <span id="time">30</span>s</p>
+      </div>
+
+      <div id="answers-container" class="answer-container"></div>
+
+      <div class="progress-bar">
+        <div id="progress" class="progress"></div>
+      </div>
+    </div>
+
+    <!-- RESULT SCREEN -->
+    <div class="screen" id="result-screen">
+      <h1>Quiz Results</h1>
+
+      <div class="result-info">
+        <p>
+          You scored <span id="final-score">0</span> out of
+          <span id="max-score">15</span>
+        </p>
+        <div id="result-message"></div>
+      </div>
+
+      <!-- LEADERBOARD -->
+      <div id="leaderboard" class="leaderboard hidden">
+        <h2>🏆 Leaderboard</h2>
+        <ul id="leaderboard-list"></ul>
+        <button id="clear-leaderboard" class="clear-btn">
+          Clear Leaderboard
+        </button>
+      </div>
+
+      <button id="restart-btn">Restart Quiz</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</body>
+</html>

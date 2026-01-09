@@ -1,0 +1,262 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #111827;
+}
+
+/* CONTAINER */
+.container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+/* SCREENS */
+.screen {
+  display: none;
+  padding: 2rem;
+  text-align: center;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* START SCREEN */
+#start-screen h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+#start-screen p {
+  color: #475569;
+  margin-bottom: 2rem;
+}
+/* LEADERBOARD SCREEN */
+#leaderboard-screen {
+  padding: 2rem;
+  text-align: center;
+}
+
+#leaderboard-screen h2 {
+  margin-bottom: 1rem;
+}
+
+
+/* QUIZ HEADER */
+.quiz-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #334155;
+  margin-bottom: 1rem;
+}
+
+/* QUESTION */
+#question-text {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: #0f172a;
+}
+
+/* ANSWERS */
+.answer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.answer-btn {
+  background: #f8fafc;
+  border: 2px solid #cbd5e1;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #0f172a; /* 👈 FORCE DARK TEXT */
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+
+.answer-btn:hover {
+  background: #e2e8f0;
+  border-color: #3b82f6;
+}
+
+
+.answer-btn.correct {
+  background: #dcfce7;
+  border-color: #22c55e;
+  color: #166534;
+}
+
+.answer-btn.incorrect {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #7f1d1d;
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+  margin-top: 1.5rem;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* RESULT SCREEN */
+#result-screen h1 {
+  margin-bottom: 1rem;
+}
+
+.result-info {
+  background: #f1f5f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+#result-message {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* BUTTON */
+button {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
+  .screen {
+    padding: 1.5rem;
+  }
+
+  #question-text {
+    font-size: 1.15rem;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #020617, #020617);
+    #leaderboard-list li {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+  }
+
+  .container {
+    background: #020617;
+    color: #f8fafc;
+  }
+
+  #question-text,
+  #start-screen h1 {
+    color: #f8fafc;
+  }
+
+  .answer-btn {
+    background: #020617;
+    border-color: #334155;
+    color: #f8fafc;
+  }
+
+  .answer-btn:hover {
+    background: #1e293b;
+  }
+
+  .result-info {
+    background: #1e293b;
+  }
+}
+input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 2px solid #e2e8f0;
+  font-size: 1rem;
+}
+
+#leaderboard-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+#leaderboard-list li {
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+.clear-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.clear-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(239, 68, 68, 0.4);
+}
+.timer {
+  font-weight: bold;
+  color: #3b82f6;
+}
+.hidden {
+  display: none;
+}
+
+.leaderboard {
+  margin-top: 1.5rem;
+}
+
+
